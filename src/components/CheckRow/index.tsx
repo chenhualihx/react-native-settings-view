@@ -39,6 +39,10 @@ export function CheckRow(props: CheckRowProps): React.ReactElement {
     setChecked(!isChecked);
     onValueChange?.(!isChecked);
   };
+    
+  useEffect(()=>{
+     setChecked(checked)
+  }, [checked]);
 
   return (
     <BaseRow
